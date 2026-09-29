@@ -2196,10 +2196,10 @@ def check_common_test_v2(name, grade, bzhb_name, a1,a2,a3,a4,a5,a6):
         maximum=goal_max.get(goal,0)
         if maximum==0: continue
         mastery=round(goal_scores.get(goal,0)/maximum*100)
-        if mastery>=80: status="🟢 Меңгерілген"
-        elif mastery>=50: status="🟡 Бекіту қажет"; weak.append(goal)
-        else: status="🔴 Олқылық анықталды"; weak.append(goal)
-        goal_report.append(f"**{goal} — {goal_name}:** {mastery}% — {status}")
+     if mastery>=80: status="● Меңгерілген"
+elif mastery>=50: status="● Бекіту қажет"; weak.append(goal)
+else: status="● Олқылық анықталды"; weak.append(goal)
+goal_report.append(f"**{goal} – {goal_name}:** {mastery}% – {status}")
     correction=[]
     if weak:
         correction.append("## 🛠 ЖЕКЕ ТҮЗЕТУ ЖОСПАРЫ")
